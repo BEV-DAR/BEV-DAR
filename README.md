@@ -14,33 +14,15 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-## Hi there 👋
-
-<!--
-**BEV-DAR/BEV-DAR** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
-
-Here are some ideas to get you started:
-
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
 This repositary contains the official Pytorch implementation for paper BEV-DAR: Enhancing Monocular Bird's Eye View Segmentation with Depth-Aware Rasterization
 
 
 ## Install
 To use our code, please install the following dependencies:
-
-torch>=1.9.1
-torchvison==0.10.1
-mmcv-full==1.3.15
-CUDA 9.2+
-For more requirements, please see requirements.txt for details. You can refer to the guidelines to install the environment correctly.
+* torch==1.9.1
+* torchvison==0.10.1
+* mmcv-full==1.3.15
+* CUDA 9.2+
 
 ## Data Preparation
 We conduct experiments of [nuScenes](https://www.nuscenes.org/download), [Argoverse](https://www.argoverse.org/),
@@ -71,6 +53,8 @@ data
 |   |   ├── ann_bev_dir
 |   |   ├── calib.json
 
+### Prepare calib.json
+"calib.json" contains the camera parameters of each image. Readers can generate the "calib.json" file by the instruction of [nuScenes](https://www.nuscenes.org/nuscenes#download), [Argoverse](https://www.argoverse.org/), [Kitti Raw](http://www.cvlibs.net/datasets/kitti/raw_data.php), [Kitti Odometry](http://www.cvlibs.net/datasets/kitti/eval_odometry.php), and [Kitti 3D Object](http://www.cvlibs.net/datasets/kitti/eval_3dobject.php). We also upload *calib.json* for each dataset to [google drive](https://drive.google.com/drive/folders/1Ahaed1OsA1EqlJOCHHN-MQQr2VpF8H7U?usp=sharing) and [Baidu Net Disk](https://pan.baidu.com/s/1wEzHWkazS5vLPZJVjpzHMw?pwd=2022).
 
 ## Training
 Take nuScenes as an example. To train a semantic segmentation model under a specific configuration, run:
