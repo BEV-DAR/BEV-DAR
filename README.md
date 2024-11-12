@@ -70,6 +70,8 @@ cd DAR
 ```
 python -m torch.distributed.launch --nproc_per_node ${NUM_GPU} --master_port ${PORT} tools/test.py ${CONFIG} ${MODEL_PATH} --out ${SAVE_RESULT_PATH} --eval ${METRIC} --launcher pytorch
 ```
+The weight for nuscenes is available at https://pan.baidu.com/s/1v6yox2KypJ6Sx9bd53IM1Q?pwd=h1g4 
+
 For example, we evaluate the mIoU on nuScenes by running:
 ```
 cd DAR
