@@ -60,21 +60,25 @@ data
 Take nuScenes as an example. To train a semantic segmentation model under a specific configuration, run:
 ```
 cd DAR
+```
 python -m torch.distributed.launch --nproc_per_node 1 --master_port 14300 tools/train.py ./configs/DAR/DAR_nuscenes.py --work-dir ./models_dir/DAR_nuscenes --launcher pytorch
 ```
 ## Evaluation
 To evaluate the performance, run the following command:
 ```
 cd DAR
+```
 python -m torch.distributed.launch --nproc_per_node ${NUM_GPU} --master_port ${PORT} tools/test.py ${CONFIG} ${MODEL_PATH} --out ${SAVE_RESULT_PATH} --eval ${METRIC} --launcher pytorch
 ```
 For example, we evaluate the mIoU on nuScenes by running:
 ```
 cd DAR
+```
 python -m torch.distributed.launch --nproc_per_node 1 --master_port 14300 tools/test.py ./configs/DAR/DAR_nuscenes.py ./models_dir/DAR_nuscenes/iter_90000.pth  --out ./results/DAR_nuscenes/DAR_nuscenes.pkl --eval mIoU --launcher pytorch
 ```
 ## Visulization
-To get the visulization results of the model, we first change the output_type from 'iou' to 'seg' in the testing process. 
+To get the visulization results of the model, we first change the output_type from 'iou' to 'seg' in the testing process.
+```
     # change the output_type from 'iou' to 'seg'
     test_cfg=dict(mode='whole',output_type='seg',positive_thred=0.5)
 )
