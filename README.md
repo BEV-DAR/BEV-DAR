@@ -1,7 +1,7 @@
 ## Hi there 👋
 
 <!--
-**BEV-DAR/BEV-DAR** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**BEV-CAR/BEV-CAR** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
 
@@ -14,7 +14,7 @@ Here are some ideas to get you started:
 - 😄 Pronouns: ...
 - ⚡ Fun fact: ...
 -->
-This repositary contains the official Pytorch implementation for paper BEV-DAR: Enhancing Monocular Bird's Eye View Segmentation with Depth-Aware Rasterization
+This repositary contains the official Pytorch implementation for paper BEV-CAR: Enhancing Monocular Bird's Eye View Segmentation with Context-Aware Rasterization
 ![image]([https://user-images.githubusercontent.com/77472466/162715638-145897ba-2c35-4734-b6a7-b30048ab80f8.png](https://github.com/BEV-DAR/BEV-DAR/blob/main/compare.png))
 
 ## Install
